@@ -1,6 +1,10 @@
 #include "IntArray.h"
 #include <algorithm>
-
+#include <iostream>
+void ia::IntArray::ShowAllElsInC() const {
+	for (uint64_t i = 0; i < this->siz; std::cout << this->GetElById(i) << ' ', ++i);
+	std::cout << std::endl;
+}
 ia::IntArray::IntArray(size_t a) {
 	if (a != 0) {
 		this->poi = new int[a];
